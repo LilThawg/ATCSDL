@@ -69,14 +69,6 @@ create table CHUNGNHAN
 	MaMB int not null
 )
 
-drop table CHUNGNHAN
-
-create table CHUNGNHAN
-(
-	MaNV int not null,
-	MaMB int not null
-)
-
 alter table CHUYENBAY add constraint PK_CHUYENBAY 
 primary key (MaCB)
 
