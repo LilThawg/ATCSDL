@@ -202,8 +202,7 @@ GO
 SELECT * FROM [Sales].[CreditCard]
  
 --Drop old column
-DROP INDEX [AK_CreditCard_CardNumber] ON [Sales].[CreditCard]
-GO
+
 ALTER TABLE [Sales].[CreditCard]
 DROP COLUMN CardNumber
  
