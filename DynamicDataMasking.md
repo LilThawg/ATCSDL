@@ -6,10 +6,10 @@ CREATE DATABASE Masks
 
 Mặt nạ mặc định che dấu các giá trị hoàn chỉnh trong cột chỉ định
 
-```
 Tạo table và insert giá trị
+
 Các cột Name, BirthDate và Social_Security sẽ có default dynamic data masking.
-```
+
 
 ```sql
 USE Masks
@@ -57,12 +57,15 @@ Mặt nạ mặc định ẩn mọi thứ trong cột mà nó được áp dụn
 
 Đây là lúc mặt nạ một phần có ích, chú ý là mặt nạ một phần chỉ áp dụng cho các cột kiểu string.
 
-```
+
 Tạo bảng và insert giá trị
+
 Cột Name và Comment sẽ bị mask 1 phần 
+
 Đối với cột Name thì hiển thị 2 kí tự đầu và 2 kí tự cuối, ở giữa thay bằng XXXX
+
 Tương tự cột Comment hiển thị 5 kí tự đầu và 5 kí tự cuối, ở giữa thay bằng XXXX
-```
+
 
 ```sql
 USE Masks
