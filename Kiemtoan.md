@@ -2,6 +2,7 @@
 -- Create an audit
 USE master;
 GO
+
 CREATE SERVER AUDIT Audit
    
 TO FILE
@@ -26,6 +27,7 @@ create database Audit
 
 USE [Audit];
 go
+
 CREATE DATABASE AUDIT SPECIFICATION Audit
 FOR SERVER AUDIT [Audit]
 ADD (SCHEMA_OBJECT_ACCESS_GROUP),
@@ -88,17 +90,14 @@ alter table ChungNhan add constraint CN_PK
 primary key (MaMB,MaNV)
 
 
+insert into NHANVIEN (MaNV,Ten,Luong) values
+(242518965,'Tran Van Son',120433)
+
 insert into CHUYENBAY(MaCB,GaDi,GaDen,DoDai,GioDi,GiaDen,ChiPhi) values
 ('VN431','SGN','CAH',3693,'05:55','06:55',236)
 
 insert into MAYBAY (MaMB,Loai,TamBay) values
 (747,'Boeing 747 - 400',13488)
-
-insert into NHANVIEN (MaNV,Ten,Luong) values
-(242518965,'Tran Van Son',120433)
-
-insert into CHUNGNHAN (MaNV,MaMB) values
-(567354612,747)
 
 drop table CHUNGNHAN
 
