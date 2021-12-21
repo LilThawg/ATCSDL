@@ -1,18 +1,4 @@
-## Mã hoá trong SQL SERVER
-
-Mã hóa dữ liệu trong suốt (Transparent data encrytion – TDE) là một trong những cơ chế an toàn, cho phép mã hóa dữ liệu nhạy cảm được lưu trữ trong bảng và không gian bảng. 
-
-Dữ liệu được mã hóa và giải mã trong suốt đối với người dùng và các ứng dụng có quyền truy cập vào dữ liệu. Để ngăn chặn việc giải mã trái phép, TDE lưu trữ các khóa mã hóa trong mô-đun an toàn bên ngoài cơ sở dữ liệu (CSDL).
-
-### Các loại mã hóa TDE
-Có 2 loại mã hoá TDE là : Mã hóa cột và mã hóa không gian bảng.
-
-Trong khi mã hóa cột TDE cho phép mã hóa dữ liệu nhạy cảm được lưu trữ trong các cột của bảng được chọn, thì mã hóa không gian bảng TDE cho phép mã hóa tất cả dữ liệu được lưu trữ trong một vùng bảng.
-
-Cả mã hóa cột và mã hóa không gian bảng TDE đều sử dụng kiến trúc dựa trên khóa hai tầng. Ngay cả khi dữ liệu mã hóa được truy xuất, dữ liệu cũng không được hiển thị cho đến khi quá trình giải mã được ủy quyền xảy ra, quá trình này là tự động cho người dùng được ủy quyền truy cập vào bảng.
-
-
-#### Mã hóa cột TDE
+#### Mã hóa cột
 Mã hóa cột TDE cho phép mã hoá từng cột riêng lẻ được sử dụng để bảo vệ dữ liệu nhạy cảm, chẳng hạn như thẻ tín dụng và số an sinh xã hội, được lưu trữ trong các cột của bảng.
 
 Giống như mã hoá dữ liệu thông thường, trong SQL server cũng có 2 cách để mã hoá dữ liệu :
@@ -215,17 +201,5 @@ SELECT * FROM [Sales].[CreditCard]
 
 ```
 
-#### Mã hóa không gian bảng TDE
-Mã hóa không gian bảng TDE cho phép mã hóa toàn bộ vùng bảng. Tất cả các đối tượng được tạo trong không gian bảng sẽ được mã hóa tự động. Mã hóa không gian bảng TDE rất hữu ích nếu trong trường hợp muốn bảo vệ dữ liệu nhạy cảm trong các bảng.
 
-Trường hợp này, không cần thực hiện phân tích chi tiết từng cột trong bảng để xác định các cột cần mã hóa.
-
-
-Mã hóa không gian bảng TDE là một thay thế tốt cho mã hóa cột TDE nếu các bảng chứa dữ liệu nhạy cảm trong nhiều cột hoặc nếu muốn bảo vệ toàn bộ bảng chứ không chỉ các cột riêng lẻ.
-
-
-Mã hóa không gian bảng TDE cũng cho phép phạm vi chỉ mục quét dữ liệu trong không gian bảng được mã hóa. Điều này là không thể với mã hóa cột TDE.
-
-
-Lưu ý, dữ liệu mã hóa được bảo vệ trong các hoạt động như JOIN và SORT. Điều này có nghĩa là dữ liệu được an toàn khi nó được di chuyển đến các vùng bảng tạm thời. Dữ liệu trong nhật ký hoàn tác và làm lại cũng được bảo vệ.
 
