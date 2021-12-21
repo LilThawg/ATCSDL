@@ -1,5 +1,5 @@
 #### Mã hóa cột
-Mã hóa cột TDE cho phép mã hoá từng cột riêng lẻ được sử dụng để bảo vệ dữ liệu nhạy cảm, chẳng hạn như thẻ tín dụng và số an sinh xã hội, được lưu trữ trong các cột của bảng.
+Mã hóa cột cho phép mã hoá từng cột riêng lẻ được sử dụng để bảo vệ dữ liệu nhạy cảm, chẳng hạn như thẻ tín dụng và số an sinh xã hội, được lưu trữ trong các cột của bảng.
 
 Giống như mã hoá dữ liệu thông thường, trong SQL server cũng có 2 cách để mã hoá dữ liệu :
 1. Mã hoá và dữ liệu vẫn có thể giải ngược lại được (encrypt and keep the data decryptable) : có nghĩa là sử dụng khoá (nói chung cả khoá bí mật và khoá công khai) để mã hoá và giải mã.
